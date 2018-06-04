@@ -158,7 +158,7 @@ public:
         strSporkKey = "0464f24c57468b84603289889204fd466ac4c59c8b0013fc2ce691b7e7612646e2eac534a07b6022e900ffa5c18434e29368631a0f22852279fd8e6ec3e0aae25d";
 
         strObfuscationPoolDummyAddress = "AWSbBnzmNkjDVaYHX7vkL1MqD96pRYWtZo";
-        nStartMasternodePayments = 1528459200; //Wed, 25 Jun 2014 20:36:16 GMT
+        nStartMasternodePayments = 1528459200; //Fri, 08 Jun 2018 12:00:00 GMT
 
         /** Zerocoin */
         zerocoinModulus = "25195908475657893494027183240048398571429282126204032027777137836043662020707595556264018525880784"
