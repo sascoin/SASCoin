@@ -1,0 +1,26 @@
+[Unit]
+Description=SasCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=sascoin
+Group=sascoin
+
+Type=forking
+PIDFile=/var/lib/sascoind/sascoind.pid
+
+ExecStart=/usr/bin/sascoind -daemon -pid=/var/lib/sascoind/sascoind.pid \
+          -conf=/etc/sascoin/sascoin.conf -datadir=/var/lib/sascoind
+
+ExecStop=-/usr/bin/sascoin-cli -conf=/etc/sascoin/sascoin.conf \
+         -datadir=/var/lib/sascoind stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

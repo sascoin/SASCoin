@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=SasCoin
+Comment=SasCoin P2P Cryptocurrency
+Comment[fr]=SasCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=SasCoin, eşten eşe kriptografik sanal para birimi
+Exec=sascoin-qt %u
+Terminal=false
+Type=Application
+Icon=sascoin128
+MimeType=x-scheme-handler/sascoin;
+Categories=Office;Finance;
