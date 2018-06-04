@@ -7,7 +7,6 @@
 
 #include "pow.h"
 
-#include "arith_uint256.h"
 #include "chain.h"
 #include "chainparams.h"
 #include "main.h"
@@ -118,7 +117,7 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
 {
     bool fNegative;
     bool fOverflow;
-    arith_uint256 bnTarget;
+    uint256 bnTarget;
 
     if (Params().SkipProofOfWorkCheck())
         return true;
@@ -126,12 +125,11 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits)
     bnTarget.SetCompact(nBits, &fNegative, &fOverflow);
 
     // Check range
-    if (fNegative || bnTarget == 0 || fOverflow || bnTarget > UintToArith256(Params().ProofOfWorkLimit()))
+    if (fNegative || bnTarget == 0 || fOverflow || bnTarget > Params().ProofOfWorkLimit())
         return error("CheckProofOfWork() : nBits below minimum work");
 
     // Check proof of work matches claimed amount
-
-    if (UintToArith256(hash) > bnTarget)
+    if (hash > bnTarget)
         return error("CheckProofOfWork() : hash doesn't match nBits");
 
     return true;
