@@ -12,6 +12,7 @@
 #include "main.h"
 #include "primitives/block.h"
 #include "uint256.h"
+#include "arith_uint256.h"
 #include "util.h"
 
 #include <math.h>
