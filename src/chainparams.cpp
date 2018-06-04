@@ -48,11 +48,10 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-	(0, uint256("0x00000fb5bb3048620659742e6e2b5303a6a4f2ea41867878087bb43821cf5c21"))
-  (8, uint256("0x000008a21c58b52c70cbcab40d2fe73f21fbbb5f7bba15bd2cfe2b9a07b5c9f0"));
+	(0, uint256("0x00000fb5bb3048620659742e6e2b5303a6a4f2ea41867878087bb43821cf5c21"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1528079988, // * UNIX timestamp of last checkpoint block
+    1528072310, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2880        // * estimated number of transactions per day after checkpoint
@@ -61,14 +60,14 @@ static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataTestnet = {
     &mapCheckpointsTestnet,
-    1528023950,
+    1528072310,
     0,
     250};
 static Checkpoints::MapCheckpoints mapCheckpointsRegtest =
     boost::assign::map_list_of(0, uint256("0x001"));
 static const Checkpoints::CCheckpointData dataRegtest = {
     &mapCheckpointsRegtest,
-    1528023950,
+    1528072310,
     0,
     100};
 libzerocoin::ZerocoinParams* CChainParams::Zerocoin_Params() const
