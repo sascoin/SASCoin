@@ -13,7 +13,7 @@
 #include "spork.h"
 
 //
-// Bootup the Masternode, look for a 100000 SasCoin input and register on the network
+// Bootup the Masternode, look for a 1000 SasCoin input and register on the network
 //
 void CActiveMasternode::ManageStatus()
 {
@@ -74,8 +74,8 @@ void CActiveMasternode::ManageStatus()
                 LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
                 return;
             }
-        } else if (service.GetPort() == 4030) {
-            notCapableReason = strprintf("Invalid port: %u - 4030 is only supported on mainnet.", service.GetPort());
+        } else if (service.GetPort() == 4010) {
+            notCapableReason = strprintf("Invalid port: %u - 4010 is only supported on mainnet.", service.GetPort());
             LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
             return;
         }

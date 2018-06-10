@@ -226,10 +226,10 @@ QT_TRANSLATE_NOOP("sascoin-core", ""
 QT_TRANSLATE_NOOP("sascoin-core", ""
 "You must specify a masternodeprivkey in the configuration. Please see "
 "documentation for help."),
-QT_TRANSLATE_NOOP("sascoin-core", "(4030 could be used only on mainnet)"),
+QT_TRANSLATE_NOOP("sascoin-core", "(4010 could be used only on mainnet)"),
 QT_TRANSLATE_NOOP("sascoin-core", "(default: %s)"),
 QT_TRANSLATE_NOOP("sascoin-core", "(default: 1)"),
-QT_TRANSLATE_NOOP("sascoin-core", "(must be 4030 for mainnet)"),
+QT_TRANSLATE_NOOP("sascoin-core", "(must be 4010 for mainnet)"),
 QT_TRANSLATE_NOOP("sascoin-core", "<category> can be:"),
 QT_TRANSLATE_NOOP("sascoin-core", "Accept command line and JSON-RPC commands"),
 QT_TRANSLATE_NOOP("sascoin-core", "Accept connections from outside (default: 1 if no -proxy or -connect)"),
