@@ -48,12 +48,13 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-	( 0, uint256("0x00000fb5bb3048620659742e6e2b5303a6a4f2ea41867878087bb43821cf5c21"))
-  (20, uint256("0x00000b216dd8e5439202ca2f51350a0f97cdb0c0259bcc07d38cd65d8fd6892b"))
-  (45, uint256("0x00000c9da92d33f0b5a2cf5983944d1e71d4732c69771a7df732cb5724c25b2d"));
+	(   0, uint256("0x00000fb5bb3048620659742e6e2b5303a6a4f2ea41867878087bb43821cf5c21"))
+  (  20, uint256("0x00000b216dd8e5439202ca2f51350a0f97cdb0c0259bcc07d38cd65d8fd6892b"))
+  (  45, uint256("0x00000c9da92d33f0b5a2cf5983944d1e71d4732c69771a7df732cb5724c25b2d"))
+  (3000, uint256("0x00000000013f4389b50a404c072491e13aa2a50b3bb794dce5732deebbe20a57"));
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1528135927, // * UNIX timestamp of last checkpoint block
+    1528506785, // * UNIX timestamp of last checkpoint block
     0,    // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
     2880        // * estimated number of transactions per day after checkpoint
@@ -97,7 +98,7 @@ public:
         pchMessageStart[2] = 0x00;
         pchMessageStart[3] = 0xaa;
         vAlertPubKey = ParseHex("046f57a3645ff3cb15667edfd6f1e642c4a78e431d9b1e3726d38d9cc52346a693286eb7d179b96c0966a32b983ee057eecd2d3eddba8cc462b659adf5363f461f");
-        nDefaultPort = 4030;
+        nDefaultPort = 4010;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // SasCoin starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
         nMaxReorganizationDepth = 100;
@@ -217,11 +218,9 @@ public:
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet sascoin addresses start with 'x' or 'y'
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);  // Testnet sascoin script addresses start with '8' or '9'
         base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);     // Testnet private keys start with '9' or 'c' (Bitcoin defaults)
-        // Testnet sascoin BIP32 pubkeys start with 'DRKV'
+
         base58Prefixes[EXT_PUBLIC_KEY] = boost::assign::list_of(0x3a)(0x80)(0x61)(0xa0).convert_to_container<std::vector<unsigned char> >();
-        // Testnet sascoin BIP32 prvkeys start with 'DRKP'
         base58Prefixes[EXT_SECRET_KEY] = boost::assign::list_of(0x3a)(0x80)(0x58)(0x37).convert_to_container<std::vector<unsigned char> >();
-        // Testnet sascoin BIP44 coin type is '1' (All coin's testnet default)
         base58Prefixes[EXT_COIN_TYPE] = boost::assign::list_of(0x80)(0x00)(0x00)(0x01).convert_to_container<std::vector<unsigned char> >();
         convertSeed6(vFixedSeeds, pnSeed6_test, ARRAYLEN(pnSeed6_test));
         fRequireRPCPassword = true;

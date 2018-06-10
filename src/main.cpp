@@ -2200,7 +2200,7 @@ int64_t GetMasternodePayment(int nHeight, int64_t blockValue, int nMasternodeCou
 	if (nHeight == 0)
 		return 0;
 
-    if (nHeight <= Params().LAST_POW_BLOCK() && nHeight >= 151200) {
+    if (nHeight <= Params().LAST_POW_BLOCK()) {
         ret = (blockValue/100)*65;
     } else if (nHeight > Params().LAST_POW_BLOCK()) {
 		    int64_t nMasternodeCollateral = (nHeight >= Params().Zerocoin_StartHeight()) ? 1000 : 100;
