@@ -1781,15 +1781,6 @@ bool AppInit2(boost::thread_group& threadGroup)
     LogPrintf("Anonymize SasCoin Amount %d\n", nAnonymizeSasCoinAmount);
     LogPrintf("Budget Mode %s\n", strBudgetMode.c_str());
 
-    /* Denominations
-
-       A note about convertability. Within Obfuscation pools, each denomination
-       is convertable to another.
-
-       For example:
-       1AMS+1000 == (.1AMS+100)*10
-       10AMS+10000 == (1AMS+1000)*10
-    */
     obfuScationDenominations.push_back((10000 * COIN) + 10000000);
     obfuScationDenominations.push_back((1000 * COIN) + 1000000);
     obfuScationDenominations.push_back((100 * COIN) + 100000);
