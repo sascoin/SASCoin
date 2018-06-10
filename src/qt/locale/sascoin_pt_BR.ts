@@ -3490,7 +3490,7 @@ https://www.transifex.com/sascoin-project/sascoin-project-translations</translat
         <translation>Você deve especificar uma masternodeprivkey na configuração. Favor verificar o manual para obter ajuda.</translation>
     </message>
     <message>
-        <source>(4030 could be used only on mainnet)</source>
+        <source>(4010 could be used only on mainnet)</source>
         <translation>(4030 could be used only on mainnet)</translation>
     </message>
     <message>

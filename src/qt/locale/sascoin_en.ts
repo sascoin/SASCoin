@@ -6031,7 +6031,7 @@ for example: alertnotify=echo %%s | mail -s &quot;SasCoin Alert&quot; admin@foo.
     </message>
     <message>
         <location line="+3"/>
-        <source>(4030 could be used only on mainnet)</source>
+        <source>(4010 could be used only on mainnet)</source>
         <translation type="unfinished">(4030 could be used only on mainnet)</translation>
     </message>
     <message>

@@ -4560,7 +4560,7 @@ bijvoorbeeld: alertnotify = echo %%s | mail -s "SasCoin Alert" admin@foo.com
         <translation>Je moet een masternodeprivkey opgeven in de configuratie. Raadpleeg de documentatie voor hulp.</translation>
     </message>
     <message>
-        <source>(4030 could be used only on mainnet)</source>
+        <source>(4010 could be used only on mainnet)</source>
         <translation>(4030 kan alleen op mainnet worden gebruikt)</translation>
     </message>
     <message>

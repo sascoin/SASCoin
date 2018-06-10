@@ -69,13 +69,13 @@ void CActiveMasternode::ManageStatus()
         }
 
         if (Params().NetworkID() == CBaseChainParams::MAIN) {
-            if (service.GetPort() != 4030) {
-                notCapableReason = strprintf("Invalid port: %u - only 4030 is supported on mainnet.", service.GetPort());
+            if (service.GetPort() != 4010) {
+                notCapableReason = strprintf("Invalid port: %u - only 4010 is supported on mainnet.", service.GetPort());
                 LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
                 return;
             }
-        } else if (service.GetPort() == 4030) {
-            notCapableReason = strprintf("Invalid port: %u - 4030 is only supported on mainnet.", service.GetPort());
+        } else if (service.GetPort() == 4010) {
+            notCapableReason = strprintf("Invalid port: %u - 4010 is only supported on mainnet.", service.GetPort());
             LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
             return;
         }
@@ -268,13 +268,13 @@ bool CActiveMasternode::Register(std::string strService, std::string strKeyMaste
 
     CService service = CService(strService);
     if (Params().NetworkID() == CBaseChainParams::MAIN) {
-        if (service.GetPort() != 4030) {
-            errorMessage = strprintf("Invalid port %u for masternode %s - only 4030 is supported on mainnet.", service.GetPort(), strService);
+        if (service.GetPort() != 4010) {
+            errorMessage = strprintf("Invalid port %u for masternode %s - only 4010 is supported on mainnet.", service.GetPort(), strService);
             LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
             return false;
         }
-    } else if (service.GetPort() == 4030) {
-        errorMessage = strprintf("Invalid port %u for masternode %s - 4030 is only supported on mainnet.", service.GetPort(), strService);
+    } else if (service.GetPort() == 4010) {
+        errorMessage = strprintf("Invalid port %u for masternode %s - 4010 is only supported on mainnet.", service.GetPort(), strService);
         LogPrintf("CActiveMasternode::Register() - %s\n", errorMessage);
         return false;
     }

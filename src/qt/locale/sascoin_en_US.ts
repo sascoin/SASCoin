@@ -4166,7 +4166,7 @@ for example: alertnotify=echo %%s | mail -s "SasCoin Alert" admin@foo.com
         <translation>You must specify a masternodeprivkey in the configuration. Please see documentation for help.</translation>
     </message>
     <message>
-        <source>(4030 could be used only on mainnet)</source>
+        <source>(4010 could be used only on mainnet)</source>
         <translation>(4030 could be used only on mainnet)</translation>
     </message>
     <message>
