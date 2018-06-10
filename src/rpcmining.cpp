@@ -449,7 +449,7 @@ Value getblocktemplate(const Array& params, bool fHelp)
     if (vNodes.empty())
         throw JSONRPCError(RPC_CLIENT_NOT_CONNECTED, "SasCoin is not connected!");
 
-   // if (IsInitialBlockDownload())
+    //if (IsInitialBlockDownload())
     //    throw JSONRPCError(RPC_CLIENT_IN_INITIAL_DOWNLOAD, "SasCoin is downloading blocks...");
 
     static unsigned int nTransactionsUpdatedLast;

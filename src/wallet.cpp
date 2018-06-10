@@ -2004,15 +2004,6 @@ bool CWallet::SelectCoinsByDenominations(int nDenom, CAmount nValueMin, CAmount 
         if (nValueRet + out.tx->vout[out.i].nValue <= nValueMax) {
             bool fAccepted = false;
 
-            // Function returns as follows:
-            //
-            // bit 0 - 10000 AMS+1 ( bit on if present )
-            // bit 1 - 1000 AMS+1
-            // bit 2 - 100 AMS+1
-            // bit 3 - 10 AMS+1
-            // bit 4 - 1 AMS+1
-            // bit 5 - .1 AMS+1
-
             CTxIn vin = CTxIn(out.tx->GetHash(), out.i);
 
             int rounds = GetInputObfuscationRounds(vin);

@@ -74,8 +74,8 @@ void CActiveMasternode::ManageStatus()
                 LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
                 return;
             }
-        } else if (service.GetPort() == 4010) {
-            notCapableReason = strprintf("Invalid port: %u - 4010 is only supported on mainnet.", service.GetPort());
+        } else if (service.GetPort() == 4030) {
+            notCapableReason = strprintf("Invalid port: %u - 4030 is only supported on mainnet.", service.GetPort());
             LogPrintf("CActiveMasternode::ManageStatus() - not capable: %s\n", notCapableReason);
             return;
         }
@@ -473,7 +473,7 @@ vector<COutput> CActiveMasternode::SelectCoinsMasternode()
 
     // Filter
     BOOST_FOREACH (const COutput& out, vCoins) {
-        if (out.tx->vout[out.i].nValue == 100000 * COIN) { //exactly
+        if (out.tx->vout[out.i].nValue == 1000 * COIN) { //exactly
             filteredCoins.push_back(out);
         }
     }
