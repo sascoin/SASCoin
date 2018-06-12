@@ -833,8 +833,10 @@ std::string CBudgetManager::GetRequiredPaymentsString(int nBlockHeight)
 CAmount CBudgetManager::GetTotalBudget(int nHeight)
 {
     if (chainActive.Tip() == NULL) return 0;
-    nSubsidy = 0 * COIN;
-    return nSubsidy;
+
+    CAmount nSubsidy = 0;
+
+    return nSubsidy
 }
 
 void CBudgetManager::NewBlock()
