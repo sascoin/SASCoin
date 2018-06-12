@@ -834,7 +834,7 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
 {
     if (chainActive.Tip() == NULL) return 0;
     nSubsidy = 0 * COIN;
-    return nSubsidy
+    return nSubsidy;
 }
 
 void CBudgetManager::NewBlock()
