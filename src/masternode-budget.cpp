@@ -836,7 +836,7 @@ CAmount CBudgetManager::GetTotalBudget(int nHeight)
 
     CAmount nSubsidy = 0;
 
-    return nSubsidy
+    return nSubsidy;
 }
 
 void CBudgetManager::NewBlock()
