@@ -18,7 +18,7 @@ static const int PROTOCOL_VERSION = 80000;
 static const int INIT_PROTO_VERSION = 209;
 
 //! In this version, 'getheaders' was introduced.
-static const int GETHEADERS_VERSION = 89000;
+static const int GETHEADERS_VERSION = 72000;
 
 //! disconnect from peers older than this proto version
 static const int MIN_PEER_PROTO_VERSION_BEFORE_ENFORCEMENT = GETHEADERS_VERSION;
